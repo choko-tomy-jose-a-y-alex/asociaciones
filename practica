@@ -1,0 +1,49 @@
+import java.util.List;
+import static java.util.Arrays.asList;
+import static java.util.Collections.emptyList;
+
+class Materia {
+ String nombreMateria;
+ Materia(String nombreMateria) {
+   this.nombreMateria = nombreMateria;
+ }
+}
+
+class Alumno {
+ String nombreAlumno;
+ List<Materia> materias;
+ Alumno(String nombreAlumno) {
+   this.nombreAlumno = nombreAlumno;
+ }
+}
+
+class Calificacion {
+ String cal;
+ Materia asig;
+ Calificacion(String cal) {
+   this.cal = cal;
+ }
+}
+
+
+public class EjercicioAsociaciones {
+   public static void main(String[] n) {
+      Alumno alum1 = new Alumno("Pepe");
+     Materia m1 = new Materia(n[0]);
+     Calificacion cal1 = new Calificacion(n[1]);
+     Materia m3 = new Materia(n[2]);
+     Calificacion cal2 = new Calificacion(n[3]);
+     alum1.materias = asList(m1, m3);
+     Alumno alum2 = new Alumno("Kiko"); 
+     Materia m5 = new Materia(n[4]);
+     Calificacion cal3 = new Calificacion(n[5]);
+     Materia m7 = new Materia(n[6]);
+     Calificacion cal4 = new Calificacion(n[7]);
+     alum2.materias = asList(m5, m7);
+	cal1.asig=m1;
+	cal2.asig=m3;
+	cal3.asig=m5;
+	cal4.asig=m7;
+	
+   }
+}
